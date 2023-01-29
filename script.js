@@ -10,9 +10,11 @@ for(var i=0;i<buttons.length;i++){
 	buttons[i].addEventListener('click',(e) =>{
 		var numberEntered = e.target.innerHTML;
 		if(numberEntered == 'AC'){
-			values.value = '0';
+			values.value = '';
+			srnvalues = values.value;
 		}else if(numberEntered == 'DEL'){
 			values.value = values.value.toString().slice(0, -1);
+			srnvalues = values.value;
 		
 		}else if(numberEntered == '='){
 			values.value = eval(srnvalues)
